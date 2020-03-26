@@ -1,0 +1,16 @@
+// ui kit, variables and helpers
+@import "shared/_reset.scss";
+@import "shared/coloursAndFonts";
+@import "shared/mixins";
+@import "shared/breakpoints";
+@import "shared/ui-kit";
+@import "shared/classes";
+
+// vendor/libraries
+@import "../../node_modules/bulma/bulma.sass";
+//@import "../../node_modules/@fortawesome/fontawesome-free/css/all.min.css"; //font awesome
+
+// features
+
+// page specific
+@import "pages/home.scss";

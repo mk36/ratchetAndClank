@@ -1,0 +1,32 @@
+/**
+  Fonts
+ */
+
+$primary-font: "Lato", sans-serif;
+
+// headers
+$header-1-font-size: 2em;
+$header-2-font-size: 1.5em;
+$header-3-font-size: 1.17em;
+$header-4-font-size: 1.12em;
+$header-5-font-size: 0.83em;
+
+// paragraphs
+$paragraph-font-size: 12pt;
+
+// get the font style for an element
+@mixin setFontStyle($size){
+  font-size: $size;
+  font-family: $primary-font;
+}
+
+/**
+  Colours
+*/
+$top-villas-blue: #1E2F57;
+$top-villa-light-blue: #7BA8FF;
+$top-villas-white: white;
+$top-villas-black: black;
+
+$primary-color: $top-villas-blue;
+$secondary-color: $top-villa-light-blue;

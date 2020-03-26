@@ -1,0 +1,36 @@
+/**
+ * Site Breakpoints
+ */
+$tablet-width-min: 768px;
+$tablet-width-max: 1024px;
+
+$desktop-width-min: 1024px;
+
+/**
+ Mixins for media queries
+
+example of how to use:
+
+  @include tablet(){
+    color: yellow;
+  }
+
+  @include desktop(){
+    color: red;
+  }
+ */
+
+@mixin tablet {
+  @media only screen and (min-width: #{$tablet-width-min}) and (max-width: #{$tablet-width-max}) {
+    @content;
+    body:after{
+      content: "tablet"
+    }
+  }
+}
+
+@mixin desktop {
+  @media only screen and (min-width: #{$desktop-width-min}) {
+    @content;
+  }
+}
