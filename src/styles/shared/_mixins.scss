@@ -1,7 +1,7 @@
 // background image
 @mixin setBackgroundImage($url){
-  background-image: url($url);
   background: center no-repeat;
+  background-image: url($url);
   background-size: cover;
 }
 

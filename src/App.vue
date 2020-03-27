@@ -1,32 +1,56 @@
-<style lang="scss">
+<style lang="scss" scoped>
+    .ratchet-site{
 
+        .main-banner{
+            width: 100%;
+            height: 700px;
+            @include setBackgroundImage('~./assets/images/banner/bannerDesktop.jpg');
+        }
+
+        .empty-divider{
+            background-color: $black-light;
+            height: 50px;
+        }
+    }
 </style>
 
 <template>
-  <div id="app">
-   <test-comp></test-comp>
-    <p>test</p>
-      <div class="home">
-          <p>hello</p>
-          <div class="columns">
-              <div class="column">1</div>
-              <div class="column">2</div>
-              <div class="column">3</div>
-              <div class="column">4</div>
-              <div class="column">5</div>
-          </div>
-      </div>
-  </div>
+    <div class="ratchet-site">
+        <site-header></site-header>
+
+        <section class="main-banner"></section>
+        <sub-nav></sub-nav>
+
+        <image-section></image-section>
+        <overview-section></overview-section>
+        <videos-section></videos-section>
+
+        <div class="empty-divider"></div>
+        <release-section></release-section>
+        <site-footer></site-footer>
+    </div>
 </template>
 
 <script>
-import "./styles/styles.scss";
-import TestComp from './components/test-comp/test-comp.vue';
+    import "./styles/styles.scss";
+    import SiteHeader from './components/header/site-header';
+    import SubNav from './components/sub-nav/sub-nav';
+    import ImageSection from './components/sections/image-section';
+    import OverviewSection from './components/sections/overview-section';
+    import VideosSection from './components/sections/videos-section';
+    import ReleaseSection from './components/sections/release-section';
+    import SiteFooter from './components/footer/site-footer';
 
-export default {
-  name: 'App',
-  components: {
-    TestComp
-  }
-}
+    export default {
+        name: 'App',
+        components: {
+            SiteHeader,
+            SubNav,
+            ImageSection,
+            OverviewSection,
+            VideosSection,
+            ReleaseSection,
+            SiteFooter
+        }
+    }
 </script>

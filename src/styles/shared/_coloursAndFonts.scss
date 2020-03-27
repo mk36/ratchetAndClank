@@ -2,13 +2,13 @@
   Fonts
  */
 
-$primary-font: "Lato", sans-serif;
+$primary-font: 'Montserrat',sans-serif;
 
 // headers
 $header-1-font-size: 2em;
-$header-2-font-size: 1.5em;
+$header-2-font-size: 2.5rem;
 $header-3-font-size: 1.17em;
-$header-4-font-size: 1.12em;
+$header-4-font-size: 1.5rem;
 $header-5-font-size: 0.83em;
 
 // paragraphs
@@ -23,10 +23,12 @@ $paragraph-font-size: 12pt;
 /**
   Colours
 */
-$top-villas-blue: #1E2F57;
-$top-villa-light-blue: #7BA8FF;
-$top-villas-white: white;
-$top-villas-black: black;
+$white: white;
+$black-dark: #151C1F;
+$black-mid: #292929;
+$black-light: #293237;
+$black-text: #404040;
+$blue-light: #78B1BB;
+$grey-dark: rgba(0,0,0,.5);
 
-$primary-color: $top-villas-blue;
-$secondary-color: $top-villa-light-blue;
+
