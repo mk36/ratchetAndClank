@@ -6,6 +6,14 @@
     h2{
         color: $white;
     }
+
+    img{
+        @include paddingBorderBox(0 25px);
+
+        @include desktop{
+            @include paddingBorderBox(0);
+        }
+    }
 }
 </style>
 

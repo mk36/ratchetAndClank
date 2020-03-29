@@ -12,7 +12,7 @@
     &__modal{
         display: none;
         @include positioningOffset(fixed, 0, unset, unset, 0);
-        z-index: 10;
+        z-index: $z-index-modal;
         background-color: $black-mid;
         width: 100%;
         height: 100%;
@@ -25,10 +25,15 @@
         &__image{
             @include centerContent();
             cursor: zoom-out;
-            @include paddingBorderBox(50px);
+
             width: 100%;
-            height: 100%;
+
             object-fit: cover;
+
+            @include desktop{
+                @include paddingBorderBox(50px);
+                height: 100%;
+            }
         }
     }
 }
@@ -39,7 +44,7 @@
         <img @click="show = true" class="zoom-image__placeholder" :src="getImgUrl(url)" alt="">
 
         <div class="zoom-image__modal" :class="{'show': show}" @click="show = false">
-            <img  class="zoom-image__modal__image" :src="getImgUrl(url)" alt="">
+            <img class="zoom-image__modal__image" :src="getImgUrl(url)" alt="">
         </div>
 
     </div>

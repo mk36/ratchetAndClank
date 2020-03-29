@@ -3,7 +3,12 @@
 
         .main-banner{
             width: 100%;
-            height: 700px;
+            height: 300px;
+
+            @include desktop{
+                height: 700px;
+            }
+
             @include setBackgroundImage('~./assets/images/banner/bannerDesktop.jpg');
         }
 

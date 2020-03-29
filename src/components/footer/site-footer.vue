@@ -1,5 +1,11 @@
 <style lang="scss" scoped>
     .site-footer{
+        text-align: center;
+
+        @include desktop{
+            text-align: left;
+        }
+
         &__links{
             background-color: $black-light;
 

@@ -4,13 +4,21 @@
   pointer-events: none;
 }
 
+.full{
+  width: 100%;
+}
+
 .max-content-width{
-  width: 1000px;
+  max-width: 1000px;
   margin: auto;
 }
 
 .section-padding{
-  padding: 50px 0;
+  @include paddingBorderBox(50px 30px);
+
+  @include desktop{
+    @include paddingBorderBox(50px 0);
+  }
 }
 
 hr.title-divider{

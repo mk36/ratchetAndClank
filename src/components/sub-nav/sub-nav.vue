@@ -1,11 +1,19 @@
 <style lang="scss" scoped>
+    .sub-nav-wrapper{
+        height: 31px;
+    }
+
     .sub-nav{
         text-align: center;
         background-color: $black-light;
 
         &.sticky{
             width: 100%;
-            @include positioningOffset(fixed, $header-height, unset, unset, 0);
+            @include positioningOffset(fixed, $header-height-mobile, unset, unset, 0);
+
+            @include desktop{
+                @include positioningOffset(fixed, $header-height, unset, unset, 0);
+            }
         }
 
         p{
@@ -20,10 +28,12 @@
 </style>
 
 <template>
-    <div class="sub-nav">
-        <p href="#" @click="scrollToSection('.image-section')">Images</p>
-        <p href="#"  @click="scrollToSection('.overview-section')">Overview</p>
-        <p href="#"  @click="scrollToSection('.video-section')">Videos</p>
+    <div class="sub-nav-wrapper">
+        <div class="sub-nav">
+            <p href="#" @click="scrollToSection('.image-section')">Images</p>
+            <p href="#"  @click="scrollToSection('.overview-section')">Overview</p>
+            <p href="#"  @click="scrollToSection('.video-section')">Videos</p>
+        </div>
     </div>
 </template>
 
@@ -44,10 +54,10 @@
                 this.snapOnScroll();
             },
             snapOnScroll(){
-                let nav = document.querySelector('.sub-nav');
-                let subNavTop = nav.offsetTop - (nav.offsetHeight * 2);
-
                 document.addEventListener('scroll', function () {
+                    let navWrapper = document.querySelector('.sub-nav-wrapper');
+                    let nav = navWrapper.querySelector('.sub-nav');
+                    let subNavTop = navWrapper.offsetTop - (navWrapper.offsetHeight * 2);
                     let pos = window.scrollY;
 
                     if(pos >= subNavTop){

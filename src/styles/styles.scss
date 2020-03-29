@@ -4,10 +4,11 @@
 @import "shared/mixins";
 @import "shared/breakpoints";
 @import "shared/classes";
+@import "shared/variables";
 
 // vendor/libraries
 @import "../../node_modules/bulma/bulma.sass";
-//@import "../../node_modules/@fortawesome/fontawesome-free/css/all.min.css"; //font awesome
+@import "../../node_modules/@fortawesome/fontawesome-free/css/all.min.css"; //font awesome
 
 // ui kit
 @import "shared/ui-kit";
