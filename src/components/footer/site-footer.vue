@@ -57,7 +57,7 @@
 
                     <ul class="column site-footer__links__list">
                         <li class="site-footer__links__list__title">Careers</li>
-                        <li>Working At Insomniac </li>
+                        <li>Working At Insomniac</li>
                         <li>Job Openings</li>
                         <li>Moonlighting</li>
                         <li>Baker’s Dozen</li>
