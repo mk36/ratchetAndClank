@@ -71,7 +71,8 @@
             },
             closeMenu(event){
                 let vm = this;
-                if(event.originalTarget.classList.contains('open')){
+
+                if(event.target.classList.contains('open')){
                     vm.$emit('close', true);
                 }
             }
